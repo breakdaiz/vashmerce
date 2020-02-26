@@ -9,7 +9,7 @@ class Directory extends Component {
     this.state = {
       sections: [{
         title: 'hats',
-        imageUrl: 'https://i.ibb.co/cvpnntL1/hats.png',
+        imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
         id: 1,
         linkUrl: 'hats'
       },

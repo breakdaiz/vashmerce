@@ -6,11 +6,9 @@ import CollectionPreview from '../../components/preview-collection/CollectionPre
 
      constructor(props) {
          super(props);
-
          this.state = {
              collections : SHOP_DATA
          }
-
      }
 
     render() {
@@ -20,7 +18,8 @@ import CollectionPreview from '../../components/preview-collection/CollectionPre
             <div className="shop-page">
                 {
                  collections.map(({id, ...otherCollectioProps}) => (
-                        <CollectionPreview key={id} {...otherCollectioProps} />
+                     <CollectionPreview key={id} 
+                     {...otherCollectioProps} />
                     ))
                 }
                

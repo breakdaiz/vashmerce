@@ -7,6 +7,10 @@ import { ReactComponent as Logo } from '../../assets/crown.svg';
 // Firebase
 import { auth } from '../../firebase/firebase.utils';
 
+// Redux
+import { connect } from 'react-redux';
+
+
 
 class Header extends Component {
 
@@ -19,7 +23,7 @@ class Header extends Component {
   render() {
     const {currentUser} = this.props;
 
-    console.log(currentUser)
+    // console.log(currentUser)
     return (
     <div className='header'>
         <Link className='logo-container' to='/'>
@@ -45,10 +49,16 @@ class Header extends Component {
           
         }
         
+        
       </div>
     </div> 
     )
   }
 }
 
-export default Header
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser
+});
+
+export default connect(mapStateToProps)(Header);
+

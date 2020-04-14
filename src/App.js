@@ -9,13 +9,11 @@ import SignInSignup from './pages/signin-signup/SignInSignup'
 
 import { auth, createUserProfileDocument } from '../src/firebase/firebase.utils.js';
 
-// redux
+// Redux
 import {connect} from 'react-redux';
 import { setCurrentUser } from './redux/user/user.actions';
 
 class App extends Component {
-
-
   
   unsubscribeFromAuth = null;
   

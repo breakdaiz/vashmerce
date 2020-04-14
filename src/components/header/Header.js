@@ -10,6 +10,9 @@ import { auth } from '../../firebase/firebase.utils';
 // Redux
 import { connect } from 'react-redux';
 
+// CartIcon
+import CartIcon from '../../components/cart-icon/CartIcon';
+
 
 
 class Header extends Component {
@@ -48,7 +51,7 @@ class Header extends Component {
           )
           
         }
-        
+        <CartIcon/>
         
       </div>
     </div> 

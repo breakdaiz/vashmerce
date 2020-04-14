@@ -12,19 +12,14 @@ import { connect } from 'react-redux';
 
 // CartIcon
 import CartIcon from '../../components/cart-icon/CartIcon';
+import CartDropdown from '../../components/cart-dropdown/CartDropdown';
 
 
 
 class Header extends Component {
 
-  
-  // constructor(props) {
-  //   super(props);
-   
-  // }
-   
   render() {
-    const {currentUser} = this.props;
+    const {currentUser, hidden } = this.props;
 
     // console.log(currentUser)
     return (
@@ -52,15 +47,17 @@ class Header extends Component {
           
         }
         <CartIcon/>
-        
       </div>
+      { hidden ? null :   <CartDropdown/> }
     </div> 
     )
   }
 }
 
-const mapStateToProps = state => ({
-  currentUser: state.user.currentUser
+const mapStateToProps = ({user: {currentUser },cart: { hidden }}) => ({
+  currentUser,
+  hidden
+
 });
 
 export default connect(mapStateToProps)(Header);

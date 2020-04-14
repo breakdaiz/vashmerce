@@ -18,7 +18,7 @@ class App extends Component {
   unsubscribeFromAuth = null;
   
   componentDidMount() {
-    const { setCurrentUser, currentUser }  = this.props;
+    const { setCurrentUser }  = this.props;
     
    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => { 
 
@@ -59,10 +59,10 @@ class App extends Component {
 
 const mapStateToProps = ({ user }) => ({
   currentUser: user.currentUser
-})
+});
 
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))  
-})
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

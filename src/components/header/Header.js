@@ -48,7 +48,7 @@ class Header extends Component {
         }
         <CartIcon/>
       </div>
-      { hidden ? null :   <CartDropdown/> }
+      { hidden ? null :  <CartDropdown/> }
     </div> 
     )
   }

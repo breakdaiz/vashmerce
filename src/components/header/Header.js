@@ -43,8 +43,7 @@ class Header extends Component {
           <Link className='option' to='/signin'>
              SIGN IN
           </Link>
-          )
-          
+          ) 
         }
         <CartIcon/>
       </div>

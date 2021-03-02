@@ -2,7 +2,7 @@ import React from 'react'
 import './collection-item.styles.scss';
 
 // import CustomButton from '../custom-button/customButton';
-import CustomButton from '../../components/custom-button/customButton';
+import CustomButton from '../custom-button/customButton';
 
 // Redux
 import {connect} from 'react-redux';
@@ -24,7 +24,7 @@ const CollectionItem = ({item, addItem, }) => {
         </div>
     )
 }
-
+c
 const mapDispatchToProps = dispatch => ({
     addItem: item => dispatch(addItem(item))
 });

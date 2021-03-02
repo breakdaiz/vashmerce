@@ -3,7 +3,7 @@ import './menuitem.styles.scss';
 import { withRouter } from 'react-router-dom';
 
 const MenuItem = ({title, imageUrl, size, history, linkUrl, match }) => {
-  console.log(match.url);
+  // console.log(match.url);
   
   return (
   <div className={`${size} menu-item`} onClick= {() => history.push(`${match.url}${linkUrl}`)}>
